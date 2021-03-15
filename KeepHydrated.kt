@@ -1,16 +1,23 @@
+import java.util.Scanner
+
 /*
 Prompt for time
-Round down to whole
-If even, divide by two for liters
-Else, subtract one first, then divide by two for liters
-Display the liters of water drank.
+Multiply hours by .5
+Remove the decimal
 */
 
 fun main() {
-    val hoursCycled = 1.99
-    val oop = hoursCycled.toInt()
+    print("Please enter the hours cycled and I'll tell you how much water Nathan drank__________:")
+    
+    //Scanner object for reading input
+    val reader = Scanner(System.`in`)
 
-    print(hoursCycled.toInt())
+    //Double variable from keyboard input
+    val hoursCycled:Double = reader.nextDouble()
 
-
+    //Truncate the decimal -- rounding down to the nearest whole
+    val waterConsumed = (hoursCycled * .5).toInt()
+    
+    //Display output
+    print("Nathan drank $waterConsumed liter(s)") 
 }
