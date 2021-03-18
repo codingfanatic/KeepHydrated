@@ -16,8 +16,12 @@ fun main() {
     val hoursCycled:Double = reader.nextDouble()
 
     //Truncate the decimal -- rounding down to the nearest whole
-    val waterConsumed = (hoursCycled * .5).toInt()
+    val waterConsumed = getWater(hoursCycled).toInt()
     
     //Display output
     print("Nathan drank $waterConsumed liter(s)") 
+}
+
+fun getWater(time: Double): Double {
+    return time * .5
 }
